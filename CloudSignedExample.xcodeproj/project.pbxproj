@@ -19,6 +19,7 @@
 		ACBC8FEE27864212005840A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACBC8FF027864213005840A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBC8FF327864213005840A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACBC8FFA27864243005840A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		ACBC8FEB27864212005840A1 /* CloudSignedExample */ = {
 			isa = PBXGroup;
 			children = (
+				ACBC8FFA27864243005840A1 /* Info.plist */,
 				ACBC8FEC27864212005840A1 /* CloudSignedExampleApp.swift */,
 				ACBC8FEE27864212005840A1 /* ContentView.swift */,
 				ACBC8FF027864213005840A1 /* Assets.xcassets */,
@@ -272,6 +274,7 @@
 				DEVELOPMENT_TEAM = BY7K35VQV5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloudSignedExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +305,7 @@
 				DEVELOPMENT_TEAM = BY7K35VQV5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloudSignedExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
