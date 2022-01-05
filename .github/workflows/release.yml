@@ -11,6 +11,11 @@ jobs:
       - name: Bundle install
         run: bundle install
 
+      - name: Prepare API_KEY
+        env:
+          AUTHENTICATION_KEY_CONTENT: ${{ secrets.AUTHENTICATION_KEY_CONTENT }}
+        run: echo "$AUTHENTICATION_KEY_CONTENT" > AuthKey.p8
+
       - name: Build app
         env:
           LC_ALL: en_US.UTF-8
@@ -20,6 +25,10 @@ jobs:
           AUTHENTICATION_KEY_CONTENT: ${{ secrets.AUTHENTICATION_KEY_CONTENT }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
         run: bundle exec fastlane release_to_ipa
+
+      - name: Cleanup API_KEY
+        if: always()
+        run: rm -rf AuthKey.p8
 
       - name: Release
         env:
