@@ -47,8 +47,18 @@ lane :release_to_ipa do
     xcargs: "-allowProvisioningUpdates",
     output_name: "CloudSignedExample.ipa"
   )
-  upload_to_testflight(
-    skip_submission: true,
-    skip_waiting_for_build_processing: true
+end
+
+lane :github_release do
+
+  version = sh("cd ..; agvtool what-version -terse").gsub("\n",'')
+
+  set_github_release(
+    repository_name: ENV["REPO"],
+    api_bearer: ENV["GITHUB_TOKEN"],
+    name: "v#{version}",
+    tag_name: "v#{version}",
+    commitish: "main",
+    upload_assets: ["CloudSignedExample.ipa", "CloudSignedExample.app.dSYM.zip"]
   )
 end

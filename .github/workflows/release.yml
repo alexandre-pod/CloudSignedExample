@@ -1,0 +1,30 @@
+name: Release
+
+on: workflow_dispatch
+
+jobs:
+  release_github:
+    runs-on: macOS-11
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Bundle install
+        run: bundle install
+
+      - name: Build app
+        env:
+          LC_ALL: en_US.UTF-8
+          LANG: en_US.UTF-8
+          AUTHENTICATION_KEY_ISSUER_ID: ${{ secrets.AUTHENTICATION_KEY_ISSUER_ID }}
+          AUTHENTICATION_KEY_ID: ${{ secrets.AUTHENTICATION_KEY_ID }}
+          AUTHENTICATION_KEY_CONTENT: ${{ secrets.AUTHENTICATION_KEY_CONTENT }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+        run: bundle exec fastlane release_to_ipa
+
+      - name: Release
+        env:
+          LC_ALL: en_US.UTF-8
+          LANG: en_US.UTF-8
+          REPO: alexandre-pod/CloudSignedExample
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bundle exec fastlane github_release
