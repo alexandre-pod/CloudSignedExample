@@ -1,2 +1,6 @@
 .env
 fastlane/report.xml
+
+# Release directories
+derivedData
+release_output
