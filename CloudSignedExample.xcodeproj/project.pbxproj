@@ -7,13 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC57A8572787144B00B73218 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC57A8562787144B00B73218 /* WidgetKit.framework */; };
+		AC57A8592787144B00B73218 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC57A8582787144B00B73218 /* SwiftUI.framework */; };
+		AC57A85C2787144B00B73218 /* CloudSignedExample_Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57A85B2787144B00B73218 /* CloudSignedExample_Widgets.swift */; };
+		AC57A85E2787144C00B73218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC57A85D2787144C00B73218 /* Assets.xcassets */; };
+		AC57A8622787144C00B73218 /* CloudSignedExample_WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AC57A8542787144B00B73218 /* CloudSignedExample_WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACBC8FED27864212005840A1 /* CloudSignedExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC8FEC27864212005840A1 /* CloudSignedExampleApp.swift */; };
 		ACBC8FEF27864212005840A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC8FEE27864212005840A1 /* ContentView.swift */; };
 		ACBC8FF127864213005840A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBC8FF027864213005840A1 /* Assets.xcassets */; };
 		ACBC8FF427864213005840A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBC8FF327864213005840A1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AC57A8602787144C00B73218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACBC8FE127864212005840A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC57A8532787144B00B73218;
+			remoteInfo = CloudSignedExample_WidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC57A8632787144C00B73218 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AC57A8622787144C00B73218 /* CloudSignedExample_WidgetsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AC57A8542787144B00B73218 /* CloudSignedExample_WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CloudSignedExample_WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC57A8562787144B00B73218 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AC57A8582787144B00B73218 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AC57A85B2787144B00B73218 /* CloudSignedExample_Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSignedExample_Widgets.swift; sourceTree = "<group>"; };
+		AC57A85D2787144C00B73218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC57A85F2787144C00B73218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBC8FE927864212005840A1 /* CloudSignedExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudSignedExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBC8FEC27864212005840A1 /* CloudSignedExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSignedExampleApp.swift; sourceTree = "<group>"; };
 		ACBC8FEE27864212005840A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +58,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AC57A8512787144B00B73218 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC57A8592787144B00B73218 /* SwiftUI.framework in Frameworks */,
+				AC57A8572787144B00B73218 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACBC8FE627864212005840A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,10 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC57A8552787144B00B73218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC57A8562787144B00B73218 /* WidgetKit.framework */,
+				AC57A8582787144B00B73218 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC57A85A2787144B00B73218 /* CloudSignedExample_Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				AC57A85B2787144B00B73218 /* CloudSignedExample_Widgets.swift */,
+				AC57A85D2787144C00B73218 /* Assets.xcassets */,
+				AC57A85F2787144C00B73218 /* Info.plist */,
+			);
+			path = CloudSignedExample_Widgets;
+			sourceTree = "<group>";
+		};
 		ACBC8FE027864212005840A1 = {
 			isa = PBXGroup;
 			children = (
 				ACBC8FEB27864212005840A1 /* CloudSignedExample */,
+				AC57A85A2787144B00B73218 /* CloudSignedExample_Widgets */,
+				AC57A8552787144B00B73218 /* Frameworks */,
 				ACBC8FEA27864212005840A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				ACBC8FE927864212005840A1 /* CloudSignedExample.app */,
+				AC57A8542787144B00B73218 /* CloudSignedExample_WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +138,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AC57A8532787144B00B73218 /* CloudSignedExample_WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC57A8662787144C00B73218 /* Build configuration list for PBXNativeTarget "CloudSignedExample_WidgetsExtension" */;
+			buildPhases = (
+				AC57A8502787144B00B73218 /* Sources */,
+				AC57A8512787144B00B73218 /* Frameworks */,
+				AC57A8522787144B00B73218 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudSignedExample_WidgetsExtension;
+			productName = CloudSignedExample_WidgetsExtension;
+			productReference = AC57A8542787144B00B73218 /* CloudSignedExample_WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		ACBC8FE827864212005840A1 /* CloudSignedExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACBC8FF727864213005840A1 /* Build configuration list for PBXNativeTarget "CloudSignedExample" */;
@@ -79,10 +162,12 @@
 				ACBC8FE527864212005840A1 /* Sources */,
 				ACBC8FE627864212005840A1 /* Frameworks */,
 				ACBC8FE727864212005840A1 /* Resources */,
+				AC57A8632787144C00B73218 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AC57A8612787144C00B73218 /* PBXTargetDependency */,
 			);
 			name = CloudSignedExample;
 			productName = CloudSignedExample;
@@ -99,6 +184,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					AC57A8532787144B00B73218 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					ACBC8FE827864212005840A1 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -118,11 +206,20 @@
 			projectRoot = "";
 			targets = (
 				ACBC8FE827864212005840A1 /* CloudSignedExample */,
+				AC57A8532787144B00B73218 /* CloudSignedExample_WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AC57A8522787144B00B73218 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC57A85E2787144C00B73218 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACBC8FE727864212005840A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +232,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AC57A8502787144B00B73218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC57A85C2787144B00B73218 /* CloudSignedExample_Widgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACBC8FE527864212005840A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,7 +251,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AC57A8612787144C00B73218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC57A8532787144B00B73218 /* CloudSignedExample_WidgetsExtension */;
+			targetProxy = AC57A8602787144C00B73218 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AC57A8642787144C00B73218 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BY7K35VQV5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloudSignedExample_Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CloudSignedExample_Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.podlewski.alexandre.CloudSignedExample.CloudSignedExample-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC57A8652787144C00B73218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BY7K35VQV5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloudSignedExample_Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CloudSignedExample_Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.podlewski.alexandre.CloudSignedExample.CloudSignedExample-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		ACBC8FF527864213005840A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -266,6 +435,7 @@
 		ACBC8FF827864213005840A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +467,7 @@
 		ACBC8FF927864213005840A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +499,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AC57A8662787144C00B73218 /* Build configuration list for PBXNativeTarget "CloudSignedExample_WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC57A8642787144C00B73218 /* Debug */,
+				AC57A8652787144C00B73218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ACBC8FE427864212005840A1 /* Build configuration list for PBXProject "CloudSignedExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
