@@ -45,6 +45,7 @@ lane :release_to_ipa do
       "signingStyle" => "automatic",
       "manageAppVersionAndBuildNumber" => false
     },
+    skip_codesigning: true,
     xcargs: "-allowProvisioningUpdates -authenticationKeyIssuerID #{ENV['AUTHENTICATION_KEY_ISSUER_ID']} -authenticationKeyID #{ENV['AUTHENTICATION_KEY_ID']} -authenticationKeyPath \"#{auth_key_path}\"",
     output_name: "CloudSignedExample.ipa"
   )
