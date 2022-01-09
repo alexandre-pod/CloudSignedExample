@@ -7,6 +7,7 @@ lane :release_to_testflight do
     key_content: ENV['AUTHENTICATION_KEY_CONTENT'],
     in_house: false
   )
+  auth_key_path = sh("pwd").gsub("\n",'') + "/../AuthKey.p8"
   build_app(
     scheme: "CloudSignedExample",
     configuration: "Release",
@@ -18,7 +19,7 @@ lane :release_to_testflight do
       "signingStyle" => "automatic",
       "manageAppVersionAndBuildNumber" => false
     },
-    xcargs: "-allowProvisioningUpdates"
+    xcargs: "-allowProvisioningUpdates -authenticationKeyIssuerID #{ENV['AUTHENTICATION_KEY_ISSUER_ID']} -authenticationKeyID #{ENV['AUTHENTICATION_KEY_ID']} -authenticationKeyPath \"#{auth_key_path}\""
   )
   upload_to_testflight(
     skip_submission: true,
