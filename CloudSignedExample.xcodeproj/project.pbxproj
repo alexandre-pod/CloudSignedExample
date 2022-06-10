@@ -11,7 +11,7 @@
 		AC57A8592787144B00B73218 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC57A8582787144B00B73218 /* SwiftUI.framework */; };
 		AC57A85C2787144B00B73218 /* CloudSignedExample_Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57A85B2787144B00B73218 /* CloudSignedExample_Widgets.swift */; };
 		AC57A85E2787144C00B73218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC57A85D2787144C00B73218 /* Assets.xcassets */; };
-		AC57A8622787144C00B73218 /* CloudSignedExample_WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AC57A8542787144B00B73218 /* CloudSignedExample_WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AC57A8622787144C00B73218 /* CloudSignedExample_WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AC57A8542787144B00B73218 /* CloudSignedExample_WidgetsExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACBC8FED27864212005840A1 /* CloudSignedExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC8FEC27864212005840A1 /* CloudSignedExampleApp.swift */; };
 		ACBC8FEF27864212005840A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC8FEE27864212005840A1 /* ContentView.swift */; };
 		ACBC8FF127864213005840A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBC8FF027864213005840A1 /* Assets.xcassets */; };
@@ -49,6 +49,8 @@
 		AC57A85B2787144B00B73218 /* CloudSignedExample_Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSignedExample_Widgets.swift; sourceTree = "<group>"; };
 		AC57A85D2787144C00B73218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC57A85F2787144C00B73218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC8AF44728531E9A00BE1249 /* CloudSignedExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudSignedExample.entitlements; sourceTree = "<group>"; };
+		AC8AF44828531E9A00BE1249 /* CloudSignedExample_WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudSignedExample_WidgetsExtension.entitlements; sourceTree = "<group>"; };
 		ACBC8FE927864212005840A1 /* CloudSignedExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudSignedExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBC8FEC27864212005840A1 /* CloudSignedExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSignedExampleApp.swift; sourceTree = "<group>"; };
 		ACBC8FEE27864212005840A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		ACBC8FE027864212005840A1 = {
 			isa = PBXGroup;
 			children = (
+				AC8AF44828531E9A00BE1249 /* CloudSignedExample_WidgetsExtension.entitlements */,
 				ACBC8FEB27864212005840A1 /* CloudSignedExample */,
 				AC57A85A2787144B00B73218 /* CloudSignedExample_Widgets */,
 				AC57A8552787144B00B73218 /* Frameworks */,
@@ -118,6 +121,7 @@
 		ACBC8FEB27864212005840A1 /* CloudSignedExample */ = {
 			isa = PBXGroup;
 			children = (
+				AC8AF44728531E9A00BE1249 /* CloudSignedExample.entitlements */,
 				ACBC8FFA27864243005840A1 /* Info.plist */,
 				ACBC8FEC27864212005840A1 /* CloudSignedExampleApp.swift */,
 				ACBC8FEE27864212005840A1 /* ContentView.swift */,
@@ -254,6 +258,7 @@
 /* Begin PBXTargetDependency section */
 		AC57A8612787144C00B73218 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = AC57A8532787144B00B73218 /* CloudSignedExample_WidgetsExtension */;
 			targetProxy = AC57A8602787144C00B73218 /* PBXContainerItemProxy */;
 		};
@@ -265,6 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CloudSignedExample_WidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = BY7K35VQV5;
@@ -282,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.podlewski.alexandre.CloudSignedExample.CloudSignedExample-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CloudSignedExample_WidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = BY7K35VQV5;
@@ -310,6 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.podlewski.alexandre.CloudSignedExample.CloudSignedExample-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,6 +447,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudSignedExample/CloudSignedExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"CloudSignedExample/Preview Content\"";
@@ -458,6 +468,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.podlewski.alexandre.CloudSignedExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,6 +481,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudSignedExample/CloudSignedExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"CloudSignedExample/Preview Content\"";
@@ -490,6 +502,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.podlewski.alexandre.CloudSignedExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
