@@ -3,6 +3,8 @@
 # Runs times:
 # - 68.2s
 # - 59.0s
+# - 62.2s
+# - 52.7s
 
 # Stop the script when a command returns a nonzero exit code
 set -e

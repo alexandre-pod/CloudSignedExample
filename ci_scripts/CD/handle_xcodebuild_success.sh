@@ -3,8 +3,6 @@
 # Stop the script when a command returns a nonzero exit code
 set -e
 
-pwd
-
 cd $CI_WORKSPACE
 
 if [[ "$CI_PRODUCT_PLATFORM" == 'macOS' ]];
