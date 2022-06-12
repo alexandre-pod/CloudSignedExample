@@ -65,3 +65,15 @@ lane :github_release do
     upload_assets: ["CloudSignedExample.ipa", "CloudSignedExample.app.dSYM.zip"]
   )
 end
+
+lane :github_release_from_xcode_cloud do
+  version = sh("cd ..; agvtool what-version -terse").gsub("\n",'')
+  set_github_release(
+    repository_name: ENV["REPO"],
+    api_bearer: ENV["GITHUB_TOKEN"],
+    name: "v#{version}",
+    tag_name: "v#{version}",
+    commitish: "xcode-cloud-test",
+    upload_assets: [ENV["UPLOADING_ASSET_PATH"]]
+  )
+end
